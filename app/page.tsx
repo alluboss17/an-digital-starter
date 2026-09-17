@@ -1,69 +1,97 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <div className="min-h-screen bg-slate-950 text-slate-100 font-sans antialiased">
+      {/* Navigation */}
+      <nav className="border-b border-slate-800 bg-slate-900/50 backdrop-blur sticky top-0 z-50">
+        <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+          <div className="flex items-center space-x-2">
+            <span className="text-xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+              AN Digital Studio
+            </span>
+          </div>
+          <a
+            href="https://wa.me/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-blue-600 hover:bg-blue-500 text-white px-4 py-2 rounded-lg text-sm font-semibold transition"
+          >
+            Get a Free Quote
+          </a>
+        </div>
+      </nav>
+
+      {/* Hero Section */}
+      <section className="max-w-4xl mx-auto px-6 py-20 text-center">
+        <span className="text-xs font-semibold uppercase tracking-wider text-blue-400 bg-blue-950/60 px-3 py-1 border border-blue-800 rounded-full">
+          Web Design & Lead Generation for UK Contractors
+        </span>
+        <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mt-6 mb-6 leading-tight">
+          High-Converting Websites Built for <span className="text-blue-400">UK Builders & Trades</span>
+        </h1>
+        <p className="text-lg text-slate-400 max-w-2xl mx-auto mb-8">
+          We help construction companies, renovation specialists, and local builders capture more quotes online with lightning-fast, mobile-first websites.
+        </p>
+        <div className="flex justify-center gap-4">
+          <a
+            href="#demo"
+            className="bg-blue-600 hover:bg-blue-500 text-white px-6 py-3 rounded-xl font-semibold transition shadow-lg shadow-blue-500/20"
+          >
+            View Live Contractor Template
+          </a>
+        </div>
+      </section>
+
+      {/* Features Grid */}
+      <section className="max-w-6xl mx-auto px-6 py-12 grid md:grid-cols-3 gap-6">
+        <div className="bg-slate-900/80 border border-slate-800 p-6 rounded-2xl">
+          <h3 className="text-xl font-bold text-white mb-2">⚡ Ultra Fast Load Speed</h3>
+          <p className="text-slate-400 text-sm">
+            Built with modern Next.js architecture to load instantly on mobile, ensuring potential customers don't leave before asking for a quote.
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+        <div className="bg-slate-900/80 border border-slate-800 p-6 rounded-2xl">
+          <h3 className="text-xl font-bold text-white mb-2">📱 WhatsApp Lead Integration</h3>
+          <p className="text-slate-400 text-sm">
+            Quote requests route directly to your WhatsApp business account so you can respond to local clients instantly.
+          </p>
         </div>
-      </main>
+        <div className="bg-slate-900/80 border border-slate-800 p-6 rounded-2xl">
+          <h3 className="text-xl font-bold text-white mb-2">🔨 Project Showcase</h3>
+          <p className="text-slate-400 text-sm">
+            Dedicated photo galleries designed specifically to display recent builds, extensions, and renovation work cleanly.
+          </p>
+        </div>
+      </section>
+
+      {/* Live Demo Preview Box */}
+      <section id="demo" className="max-w-5xl mx-auto px-6 py-16">
+        <div className="border border-slate-800 bg-slate-900 rounded-2xl overflow-hidden shadow-2xl">
+          <div className="bg-slate-950 px-4 py-3 border-b border-slate-800 flex items-center space-x-2">
+            <div className="w-3 h-3 rounded-full bg-red-500"></div>
+            <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
+            <div className="w-3 h-3 rounded-full bg-green-500"></div>
+            <span className="text-xs text-slate-500 ml-4 font-mono">
+              example-builder-demo.an-digital.app
+            </span>
+          </div>
+          <div className="p-8 text-center bg-gradient-to-b from-slate-900 to-slate-950">
+            <h2 className="text-2xl font-bold text-slate-200">Apex Construction & Renovations</h2>
+            <p className="text-slate-400 text-sm mt-2 max-w-md mx-auto">
+              Premium Home Extensions, Loft Conversions & Kitchen Refurbishments in Greater London.
+            </p>
+            <div className="mt-6 flex justify-center gap-3">
+              <span className="bg-slate-800 text-slate-300 px-3 py-1 rounded text-xs">5.0 ★ Google Rating</span>
+              <span className="bg-slate-800 text-slate-300 px-3 py-1 rounded text-xs">Fully Insured</span>
+              <span className="bg-slate-800 text-slate-300 px-3 py-1 rounded text-xs">Free Estimates</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="border-t border-slate-800 py-8 text-center text-xs text-slate-500">
+        © {new Date().getFullYear()} AN Digital Studio. All rights reserved.
+      </footer>
     </div>
   );
 }
