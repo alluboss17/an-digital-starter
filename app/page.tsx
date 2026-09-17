@@ -22,9 +22,9 @@ export default function Home() {
 
       {/* Hero Section */}
       <section className="max-w-4xl mx-auto px-6 py-20 text-center">
-        <span className="text-xs font-semibold uppercase tracking-wider text-blue-400 bg-blue-950/60 px-3 py-1 border border-blue-800 rounded-full">
-          Web Design & Lead Generation for UK Contractors
-        </span>
+        <span className="inline-block text-[11px] md:text-xs font-semibold uppercase tracking-wider text-blue-400 bg-blue-950/60 px-4 py-2 border border-blue-800 rounded-2xl md:rounded-full max-w-[95%] leading-relaxed">
+         Web Design & Lead Generation for UK Contractors
+       </span>
         <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mt-6 mb-6 leading-tight">
           High-Converting Websites Built for <span className="text-blue-400">UK Builders & Trades</span>
         </h1>
